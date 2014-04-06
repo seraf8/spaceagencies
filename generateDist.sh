@@ -1,42 +1,29 @@
 #!/bin/bash
 
-rm -rf dist
+DIR=~/tmp/spaceagencies
 
-mkdir -p dist/
-cp README.md dist/
+rm -rf $DIR
+
+mkdir -p $DIR
+cp README.md $DIR
 
 #Copy sounds
-mkdir -p dist/sounds
-cp sounds/* dist/sounds
+mkdir -p $DIR/sounds
+cp sounds/* $DIR/sounds
 
-#Copy shaders
-mkdir -p dist/shaders
-cp shaders/*.v.glsl dist/shaders
-cp shaders/*.g.glsl dist/shaders
-cp shaders/*.f.glsl dist/shaders
 
 # Copy libs
-mkdir -p dist/lib/lwjgl/native/linux
-mkdir -p dist/lib/lwjgl/native/windows
-cp lib/lwjgl/native/linux/*.so dist/lib/lwjgl/native/linux
-cp lib/lwjgl/native/windows/*.dll dist/lib/lwjgl/native/windows
-
-# Copy graphics
-mkdir -p dist/graphics/output
-mkdir -p dist/graphics/icons
-cp graphics/output/*.v3draw dist/graphics/output
-cp graphics/icons/*.png dist/graphics/icons
+mkdir -p $DIR/lib/lwjgl/native/linux
+mkdir -p $DIR/lib/lwjgl/native/windows
+cp lib/lwjgl/native/linux/*.so $DIR/lib/lwjgl/native/linux
+cp lib/lwjgl/native/windows/*.dll $DIR/lib/lwjgl/native/windows
 
 # Copy fonts
-mkdir -p dist/fonts
-cp fonts/*.ttf dist/fonts
-
-# Copy firmware
-mkdir -p dist/drivers
-cp drivers/*.js dist/drivers
+mkdir -p $DIR/fonts
+cp fonts/*.ttf $DIR/fonts
 
 # Copy assets
-cp -r assets dist/assets
+cp -r assets $DIR/assets
 
 # Copy res
-cp -r res dist/res
+cp -r res $DIR/res
