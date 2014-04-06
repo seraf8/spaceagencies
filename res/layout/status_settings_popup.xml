@@ -1,0 +1,47 @@
+<LinearLayout
+    i3d:id="main"
+    i3d:style="blackBlock@styles"
+    i3d:layout_width="wrap_content"
+    i3d:layout_height="wrap_content"
+    i3d:layout_gravity_x="center"
+    i3d:orientation="vertical" >
+
+    <Button
+    	i3d:id="settingsButton"
+        i3d:layout_paddingBottom="0px"
+        i3d:font="big@fonts"
+        i3d:layout_gravity_x="center"
+        i3d:text="Settings"
+        i3d:color="white@color"
+        i3d:color::over="selection@color" />
+        
+    <View
+        i3d:layout_width="match_parent"
+        i3d:layout_height="20px"
+        i3d:layout_gravity_x="center"
+        i3d:ref="main@layout/light_separator_horizontal" />
+
+    <Button
+    	i3d:id="saveButton"
+        i3d:layout_paddingBottom="0px"
+        i3d:font="big@fonts"
+        i3d:layout_gravity_x="center"
+        i3d:text="Save"
+        i3d:color="white@color"
+        i3d:color::over="selection@color" />
+        
+        <View
+        i3d:layout_width="match_parent"
+        i3d:layout_height="20px"
+        i3d:layout_gravity_x="center"
+        i3d:ref="main@layout/light_separator_horizontal" />
+
+    <Button
+    	i3d:id="quitButton"
+        i3d:layout_paddingBottom="0px"
+        i3d:font="big@fonts"
+        i3d:layout_gravity_x="center"
+        i3d:text="Quit"
+        i3d:color="white@color"
+        i3d:color::over="selection@color" />
+</LinearLayout>

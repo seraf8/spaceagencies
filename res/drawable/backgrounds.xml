@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<drawables>
+<gradient
+    name="buttonBaseBackground"
+    i3d:startColor="topButtonBase@color"
+    i3d:stopColor="bottomButtonBase@color"
+     />
+<gradient
+    name="buttonBaseBackground-over"
+    i3d:startColor="topButtonBase-over@color"
+    i3d:stopColor="bottomButtonBase-over@color"
+     />
+<gradient
+    name="buttonBaseBackground-disabled"
+    i3d:startColor="topButtonBase-disabled@color"
+    i3d:stopColor="bottomButtonBase-disabled@color"
+     />
+     
+<solid
+    name="lightBlock"
+    i3d:color="lightBlock@color" />
+ <solid
+    name="blackBlock"
+    i3d:color="black@color" />
+<solid
+    name="buttonSelectedBackground"
+    i3d:color="logoSecondary@color" />
+</drawables>
