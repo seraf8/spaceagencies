@@ -46,9 +46,12 @@ public class I3dCanvas {
             //frame.setSize(width,height);
             //frame.setUndecorated(true);  //here
             //frame.setAlwaysOnTop(true);
+            
+            frame.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
+            
             frame.setLocation(0, 0);
             Canvas canvas = new Canvas();
-            canvas.setMinimumSize(new Dimension(800, 600));
+            canvas.setMinimumSize(new Dimension(width, height));
             canvas.setPreferredSize(new Dimension(width, height));
             frame.add(canvas);
             frame.pack();
@@ -181,7 +184,6 @@ public class I3dCanvas {
     }
 
     public void display(Graphics g) {
-
         GL11.glClear(GL11.GL_ACCUM_BUFFER_BIT);
 
         for (Surface surface: context.getSurfaceList()) {
@@ -191,7 +193,7 @@ public class I3dCanvas {
     }
 
     public void show() {
-        frame.setVisible(true);        
+        frame.setVisible(true);
     }
 
     public void destroy() {

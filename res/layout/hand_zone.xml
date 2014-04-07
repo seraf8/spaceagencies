@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    i3d:id="main"
+    i3d:layout_width="wrap_content"
+    i3d:layout_height="wrap_content"
+    i3d:layout_marginBottom="10px"
+    i3d:layout_marginTop="10px"
+    i3d:layout_marginLeft="10px"
+    i3d:layout_marginRight="10px"
+    i3d:orientation="vertical" >
+
+ 	<TextView
+        i3d:text="Hand"
+        i3d:layout_marginBottom="5px" />
+
+<LinearLayout
+i3d:layout_width="wrap_content"
+    i3d:layout_height="wrap_content"
+i3d:orientation="horizontal"
+>
+
+	<View
+            i3d:id="card"
+            i3d:layout_marginLeft="5px"
+            i3d:layout_marginRight="5px"
+            i3d:ref="main@layout/card" />
+            <View
+            i3d:id="card"
+            i3d:layout_marginLeft="5px"
+            i3d:layout_marginRight="5px"
+            i3d:ref="main@layout/card" />
+            <View
+            i3d:id="card"
+            i3d:layout_marginLeft="5px"
+            i3d:layout_marginRight="5px"
+            i3d:ref="main@layout/card" />
+            <View
+            i3d:id="card"
+            i3d:layout_marginLeft="5px"
+            i3d:layout_marginRight="5px"
+            i3d:ref="main@layout/card" />
+            <View
+            i3d:id="card"
+            i3d:layout_marginLeft="5px"
+            i3d:layout_marginRight="5px"
+            i3d:ref="main@layout/card" />
+</LinearLayout>
+</LinearLayout>
