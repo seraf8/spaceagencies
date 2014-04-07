@@ -5,6 +5,7 @@ import com.spaceagencies.client.LoginManager;
 import com.spaceagencies.common.engine.EngineManager;
 import com.spaceagencies.common.game.Player;
 import com.spaceagencies.i3d.Bundle;
+import com.spaceagencies.i3d.Intent;
 import com.spaceagencies.i3d.Message;
 import com.spaceagencies.i3d.view.Activity;
 import com.spaceagencies.server.engine.game.GameEngine;
@@ -66,7 +67,7 @@ public class NewGameActivity extends Activity {
     protected void onMessage(Message message) {
         switch(message.what) {
             case NEW_GAME_CREATED_WHAT:
-//                startActivity(new Intent(BoardActivity.class));
+                startActivity(new Intent(BoardActivity.class));
                 break;
         }
     }
