@@ -15,13 +15,11 @@
          />
 	<RelativeLayout
 	 i3d:id="discardPilePlaceholder"
-	 i3d:style="cardFront@styles"
+	 i3d:style="cardShape@styles"
 	 >
-		<!--  <View
-            i3d:id="deck"
-            i3d:layout_width="matchp"
-                i3d:layout_height="wrap_content"
-            i3d:ref="main@layout/deck_zone" />-->
+		<View
+            i3d:id="card"
+            i3d:ref="main@layout/card" />
 	</RelativeLayout>
  		
 
