@@ -17,7 +17,7 @@
                 i3d:layout_height="match_parent"
                 i3d:layout_marginBottom="0px"
                 i3d:layout_marginTop="10px"
-                i3d:text="Buy zone"
+                i3d:text="Supply zone"
                 i3d:help="newGameButtonHelp@help/mainmenu"
                  />
             <Button
@@ -67,26 +67,16 @@
             i3d:layout_width="wrap_content"
             i3d:layout_height="wrap_content"
             i3d:orientation="vertical" >
-             <Button
-	                i3d:id="discardPileZone"
-	                i3d:style="bigButton@styles"
-	                i3d:layout_width="wrap_content"
-	                i3d:layout_height="wrap_content"
-	                i3d:layout_marginBottom="0px"
-	                i3d:layout_marginTop="10px"
-	                i3d:text="Discard pile"
-	                i3d:help="newGameButtonHelp@help/mainmenu"
-	                 />
-                 <Button
-                i3d:id="deckZone"
-                i3d:style="bigButton@styles"
-                i3d:layout_width="wrap_content"
+                 <View
+            i3d:id="discardPileZone"
+            i3d:layout_width="wrap_content"
                 i3d:layout_height="wrap_content"
-                i3d:layout_marginBottom="0px"
-                i3d:layout_marginTop="10px"
-                i3d:text="Deck"
-                i3d:help="newGameButtonHelp@help/mainmenu"
-                 />
+            i3d:ref="main@layout/discard_pile_zone" />
+                 <View
+            i3d:id="deckZone"
+            i3d:layout_width="wrap_content"
+                i3d:layout_height="wrap_content"
+            i3d:ref="main@layout/deck_zone" />
             </LinearLayout>
         </LinearLayout>
 </LinearLayout>

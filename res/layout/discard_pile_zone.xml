@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    i3d:id="main"
+    i3d:layout_width="wrap_content"
+    i3d:layout_height="wrap_content"
+    i3d:layout_marginBottom="10px"
+    i3d:layout_marginTop="10px"
+    i3d:layout_marginLeft="10px"
+    i3d:layout_marginRight="10px"
+    i3d:orientation="vertical" >
+
+	  <TextView
+        i3d:text="Discard pile : 3 cards"
+        i3d:layout_marginBottom="5px"
+         />
+	<RelativeLayout
+	 i3d:id="discardPilePlaceholder"
+	 i3d:style="cardFront@styles"
+	 >
+		<!--  <View
+            i3d:id="deck"
+            i3d:layout_width="matchp"
+                i3d:layout_height="wrap_content"
+            i3d:ref="main@layout/deck_zone" />-->
+	</RelativeLayout>
+ 		
+
+</LinearLayout>

@@ -25,4 +25,17 @@
 <solid
     name="buttonSelectedBackground"
     i3d:color="logoSecondary@color" />
+    
+ <solid
+    name="cardShapeBackground"
+    i3d:color="cardShapeBackground@color" />
+    
+ <solid
+    name="cardFrontBackground"
+    i3d:color="cardFrontBackground@color" />
+    
+    <solid
+    name="cardBackBackground"
+    i3d:color="cardBackBackground@color" />
+    
 </drawables>

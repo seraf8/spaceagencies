@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    i3d:id="main"
+    i3d:layout_width="wrap_content"
+    i3d:layout_height="wrap_content"
+    i3d:layout_marginBottom="10px"
+    i3d:layout_marginTop="10px"
+    i3d:layout_marginLeft="10px"
+    i3d:layout_marginRight="10px"
+    i3d:orientation="vertical" >
+
+	  <TextView
+        i3d:text="Deck : 5 cards"
+        i3d:layout_marginBottom="5px"
+         />
+	<RelativeLayout
+	 i3d:id="deckPlaceholder"
+	 i3d:style="cardShape@styles"
+	 >
+	 
+		 <RelativeLayout
+		 i3d:id="deck"
+		 i3d:style="cardBack@styles"
+		 ></RelativeLayout>
+		<!--  <View
+            i3d:id="deck"
+            i3d:layout_width="matchp"
+                i3d:layout_height="wrap_content"
+            i3d:ref="main@layout/deck_zone" />-->
+	</RelativeLayout>
+ 		
+
+</LinearLayout>

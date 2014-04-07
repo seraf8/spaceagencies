@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <drawables>
 
-    <circle
+   <!-- <circle
         name="staters"
         i3d:quality="16"
         i3d:color="staters@color" />
@@ -81,6 +81,7 @@
         i3d:insetLeft="96"
         i3d:insetTop="32"
         i3d:width="32" />
+        -->
      <inset
         name="close"
         i3d:drawable="texture@icons"
@@ -95,11 +96,12 @@
         i3d:insetLeft="128"
         i3d:insetTop="32"
         i3d:width="32" />
-        
+        <!-- 
 	<colored
         name="factory"
         i3d:drawable="production@icons"
         i3d:color="factory@color" />
+        -->
     <colored
         name="close_idle"
         i3d:drawable="close@icons"
