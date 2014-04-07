@@ -46,6 +46,10 @@ public class BitmapDrawable extends Drawable {
             texture = TextureManager.getTexture(bufferedImage);
         }
 
+        GL11.glColor3d(1,1,1);
+        
+//        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+        
         GL11.glEnable(GL11.GL_TEXTURE_2D);
 
         if (texture != null) {

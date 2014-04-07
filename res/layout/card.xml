@@ -7,8 +7,16 @@
 	  <TextView
         i3d:text="Saturn V"
         i3d:layout_marginTop="5px"
-        i3d:layout_width = "120px"
-        i3d:layout_gravity_x="center"
+        i3d:layout_width = "match_parent"
+        i3d:gravity="center"
         i3d:layout_marginBottom="5px"
          />
+         
+         <Drawable
+         	i3d:layout_width="150px"
+         	i3d:layout_height="94px"
+         	i3d:layout_marginLeft="5px"
+         	i3d:layout_marginRight="5px"
+         	i3d:ref="saturn5@photos" 
+         	/>
 </LinearLayout>
