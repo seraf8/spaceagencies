@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    i3d:id="main"
+    i3d:style="cardFront@styles"
+    i3d:orientation="vertical" >
+
+	  <TextView
+        i3d:text="Saturn V"
+        i3d:layout_marginTop="5px"
+        i3d:layout_width = "120px"
+        i3d:layout_gravity_x="center"
+        i3d:layout_marginBottom="5px"
+         />
+</LinearLayout>
