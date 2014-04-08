@@ -20,55 +20,67 @@
                 i3d:text="Supply zone"
                 i3d:help="newGameButtonHelp@help/mainmenu"
                  />
-            <Button
-                i3d:id="detailZone"
-                i3d:style="bigButton@styles"
-                i3d:layout_width="wrap_content"
-                i3d:layout_height="match_parent"
-                i3d:layout_marginBottom="0px"
-                i3d:layout_marginTop="10px"
-                i3d:text="Details zone"
-                i3d:help="newGameButtonHelp@help/mainmenu"
-                 />
+       
+                 
+                    <View
+            			i3d:id="detailZone"
+            			i3d:layout_width="275px"
+               			i3d:layout_height="match_parent"
+               			i3d:layout_marginBottom="0px"
+                		i3d:layout_marginTop="10px"
+                		i3d:layout_marginLeft="10px"
+                		i3d:layout_marginRight="10px"
+            			i3d:ref="main@layout/details_zone" />
+                 
         </LinearLayout>
         <LinearLayout
         	i3d:id="playZoneAndWaitZone"
             i3d:layout_width="match_parent"
             i3d:layout_height="wrap_content"
-            i3d:orientation="horizontal" >
+            i3d:orientation="vertical" >
              <LinearLayout
         	i3d:id="playZone"
             i3d:layout_width="100%"
             i3d:layout_height="wrap_content"
-            i3d:orientation="vertical" >
+            i3d:orientation="horizontal" >
 	      
                  <View
             i3d:id="playedCardZone"
-            i3d:layout_width="wrap_content"
+            i3d:layout_width="100%"
                 i3d:layout_height="wrap_content"
             i3d:ref="main@layout/played_cards_zone" />
-                   <View
-            i3d:id="handZone"
+            
+            <View
+            i3d:id="turnZone"
             i3d:layout_width="wrap_content"
                 i3d:layout_height="wrap_content"
-            i3d:ref="main@layout/hand_zone" />
-                 
+            i3d:ref="main@layout/turn_zone" />
+            
             </LinearLayout>
+            
+            
             <LinearLayout
         	i3d:id="waitZone"
-            i3d:layout_width="wrap_content"
+            i3d:layout_width="match_parent"
             i3d:layout_height="wrap_content"
-            i3d:orientation="vertical" >
-                 <View
-            i3d:id="discardPileZone"
-            i3d:layout_width="wrap_content"
+            i3d:orientation="horizontal" >
+            
+              <View
+            i3d:id="handZone"
+            i3d:layout_width="100%"
                 i3d:layout_height="wrap_content"
-            i3d:ref="main@layout/discard_pile_zone" />
+            i3d:ref="main@layout/hand_zone" />
+              
                  <View
             i3d:id="deckZone"
             i3d:layout_width="wrap_content"
                 i3d:layout_height="wrap_content"
             i3d:ref="main@layout/deck_zone" />
+               <View
+            i3d:id="discardPileZone"
+            i3d:layout_width="wrap_content"
+                i3d:layout_height="wrap_content"
+            i3d:ref="main@layout/discard_pile_zone" />
             </LinearLayout>
         </LinearLayout>
 </LinearLayout>

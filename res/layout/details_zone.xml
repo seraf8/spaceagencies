@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    i3d:id="main"
+    i3d:style="detailZone@styles"
+    i3d:layout_height = "match_parent"
+    i3d:orientation="vertical" >
+
+	  <TextView
+        i3d:text="Saturn V"
+        i3d:layout_marginTop="5px"
+        i3d:layout_width = "match_parent"
+        i3d:gravity="center"
+        i3d:layout_marginBottom="5px"
+        i3d:font="title-bold@fonts"
+         />
+         
+         <Drawable
+         	i3d:layout_width="255px"
+         	i3d:layout_height="159px"
+         	i3d:layout_marginLeft="10px"
+         	i3d:layout_marginRight="10px"
+         	i3d:ref="saturn5@photos" 
+         	/>
+         	
+       	<ScrollView
+        i3d:id="descriptionScrollView"
+        i3d:layout_width="match_parent"
+        i3d:layout_height="100%"
+        i3d:scroll_axis="vertical"
+        i3d:layout_marginTop="10px"
+        i3d:layout_marginBottom="10px"
+        i3d:layout_marginLeft="10px"
+       	i3d:layout_marginRight="10px"
+        i3d:style="lightBlock@styles"
+        i3d:scroll_limits="strict" >
+
+        <LinearLayout
+            i3d:id="descriptionLinearLayout"
+            i3d:layout_width = "match_parent"
+    		i3d:layout_height = "wrap_content"
+            i3d:orientation="vertical"
+             >
+            <TextView
+		        i3d:text="+ 3 actions"
+		        i3d:layout_width = "match_parent"
+		        i3d:gravity="center"
+		         />
+             <TextView
+		        i3d:text="+ 2 gold"
+		        i3d:layout_width = "match_parent"
+		        i3d:gravity="center"
+		         />
+		          <TextView
+		        i3d:text="Histoire"
+		        i3d:layout_width = "match_parent"
+		        i3d:gravity="center"
+		         />
+		          <TextView
+		        i3d:text="The Saturn V (spoken as &quot;Saturn five&quot;) was an American human-rated expendable rocket used by NASA's Apollo and Skylab programs from 1966 until 1973. A multistage liquid-fueled launch vehicle, NASA launched 13 Saturn Vs from the Kennedy Space Center, Florida with no loss of crew or payload. It remains the tallest, heaviest, and most powerful rocket ever brought to operational status and still holds the record for heaviest payload launched and heaviest payload capacity to Low Earth orbit (LEO)."
+		        i3d:layout_width = "match_parent"
+		        i3d:gravity="center"
+		         />
+            
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>

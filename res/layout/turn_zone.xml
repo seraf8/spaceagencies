@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    i3d:id="main"
+    i3d:layout_width="wrap_content"
+    i3d:layout_height="wrap_content"
+    i3d:layout_marginBottom="10px"
+    i3d:layout_marginTop="10px"
+    i3d:layout_marginLeft="10px"
+    i3d:layout_marginRight="10px"
+    i3d:orientation="horizontal" >
+
+
+	<LinearLayout
+		i3d:id="turnCounter"
+		i3d:orientation="vertical"
+		i3d:layout_width="wrap_content"
+		i3d:layout_height="match_parent">
+		<TextView
+        i3d:text="Brains : 5"
+        i3d:layout_marginBottom="5px"
+        i3d:layout_marginTop="10px"
+         />
+         <TextView
+        i3d:text="Technologies : 3"
+        i3d:layout_marginBottom="5px"
+        i3d:layout_marginTop="10px"
+         />
+         <TextView
+        i3d:text="Research : 1"
+        i3d:layout_marginBottom="5px"
+        i3d:layout_marginTop="10px"
+         />
+         
+		</LinearLayout>
+		
+		<LinearLayout
+		i3d:id="turnButton"
+		i3d:orientation="vertical"
+		i3d:layout_width="wrap_content"
+		i3d:layout_height="match_parent">
+		<Button
+                i3d:id="endTurnButton"
+                i3d:style="bigButton@styles"
+                i3d:layout_width="match_parent"
+                i3d:layout_height="wrap_content"
+                i3d:layout_marginBottom="0px"
+                i3d:layout_marginLeft="20px"
+                i3d:layout_marginRight="20px"
+                i3d:layout_marginTop="10px"
+                i3d:text="End turn"
+                i3d:help="newGameButtonHelp@help/mainmenu"
+                 />
+		</LinearLayout>
+
+	  
+ 		
+
+</LinearLayout>

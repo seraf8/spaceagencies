@@ -3,10 +3,10 @@
 	<inset
         name="saturn5"
         i3d:drawable="saturn5_full@photos"
-        i3d:height="94"
+        i3d:height="159"
         i3d:insetLeft="0"
         i3d:insetTop="0"
-        i3d:width="150" />
+        i3d:width="255" />
    <!-- <circle
         name="staters"
         i3d:quality="16"

@@ -79,7 +79,7 @@ public abstract class View {
         GL11.glTranslatef(tranlationXIncludingMargin, tranlationYIncludingMargin, 0);
         g.pushUiTranslation(new Point(tranlationXIncludingMargin, tranlationYIncludingMargin));
         g.setColor(Color.randomDarkOpaqueColor());
-//        g.drawFilledRectangle(0, 0, layoutParams.getBorderWidth(), layoutParams.getBorderHeight());
+//        g.drawFilledRectangle(0, 0, mLayoutParams.getBorderWidth(), mLayoutParams.getBorderHeight());
         styleRenderer.draw(g);
         
         
@@ -127,7 +127,7 @@ public abstract class View {
 
     public abstract void onDraw(Graphics g);
 
-    public void measure() {
+    public void measure(float widthMeasureSpec, float heightMeasureSpec) {
         if (mLayoutParams.getLayoutWidthMeasure() == LayoutMeasure.FIXED) {
             if (!mLayoutParams.getMeasurePoint().getX().isRelative()) {
                 mLayoutParams.mMeasuredContentWidth = mLayoutParams.computeMesure(mLayoutParams.getMeasurePoint().getX());
@@ -173,7 +173,7 @@ public abstract class View {
             }
         }
 
-        onMeasure();
+        onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
     public void layout(float l, float t, float r, float b) {
@@ -186,7 +186,7 @@ public abstract class View {
 
     public abstract void onLayout(float l, float t, float r, float b);
 
-    public abstract void onMeasure();
+    public abstract void onMeasure(float widthMeasureSpec, float heightMeasureSpec);
 
     public void setId(String id) {
         this.id = id;
