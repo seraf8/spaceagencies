@@ -91,6 +91,7 @@ public class MainActivity extends Activity {
         if(getContext().isPreloaded())  {
             startActivity(new Intent(MainMenuActivity.class));
             mListener.onDone();
+            getContext().getCanvas().maximise();
         }
     }
     

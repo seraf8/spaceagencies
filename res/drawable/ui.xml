@@ -29,6 +29,19 @@
         i3d:startColor="lightSeparatorTop@color"
         i3d:stopColor="lightSeparatorBase@color"
         i3d:angle="90" />
-
+     <gradient
+        name="topSeparatorV"
+        i3d:startColor="separatorBase@color"
+        i3d:stopColor="separatorTop@color"
+        i3d:angle="0" />
+    <gradient
+        name="bottomSeparatorV"
+        i3d:startColor="separatorTop@color"
+        i3d:stopColor="separatorBase@color"
+        i3d:angle="0" />
+     <solid
+        name="centerSeparatorV"
+        i3d:color="separatorTop@color" />
+        
     
 </drawables>

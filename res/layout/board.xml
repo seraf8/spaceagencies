@@ -9,17 +9,14 @@
             i3d:layout_width="match_parent"
             i3d:layout_height="100%"
             i3d:orientation="horizontal" >
-            
-            <Button
-                i3d:id="supplyZone"
-                i3d:style="bigButton@styles"
-                i3d:layout_width="100%"
-                i3d:layout_height="match_parent"
-                i3d:layout_marginBottom="0px"
-                i3d:layout_marginTop="10px"
-                i3d:text="Supply zone"
-                i3d:help="newGameButtonHelp@help/mainmenu"
-                 />
+        
+                    <View
+            			i3d:id="supplyZone"
+           				 i3d:layout_width="100%"
+	        	        i3d:layout_height="match_parent"
+	            	    i3d:layout_marginBottom="0px"
+	                	i3d:layout_marginTop="10px"
+            			i3d:ref="main@layout/supply_zone" />
        
                  
                     <View
@@ -38,11 +35,20 @@
             i3d:layout_width="match_parent"
             i3d:layout_height="wrap_content"
             i3d:orientation="vertical" >
+            
+               <View
+        i3d:layout_width="match_parent"
+        i3d:layout_height="20px"
+        i3d:layout_gravity_x="center"
+        i3d:ref="main@layout/separator_horizontal" />
+            
              <LinearLayout
         	i3d:id="playZone"
             i3d:layout_width="100%"
             i3d:layout_height="wrap_content"
             i3d:orientation="horizontal" >
+	      
+	      
 	      
                  <View
             i3d:id="playedCardZone"
@@ -57,7 +63,11 @@
             i3d:ref="main@layout/turn_zone" />
             
             </LinearLayout>
-            
+               <View
+        i3d:layout_width="match_parent"
+        i3d:layout_height="20px"
+        i3d:layout_gravity_x="center"
+        i3d:ref="main@layout/separator_horizontal" />
             
             <LinearLayout
         	i3d:id="waitZone"

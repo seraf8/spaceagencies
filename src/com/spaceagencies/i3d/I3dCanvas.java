@@ -47,8 +47,6 @@ public class I3dCanvas {
             //frame.setUndecorated(true);  //here
             //frame.setAlwaysOnTop(true);
             
-            frame.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
-            
             frame.setLocation(0, 0);
             Canvas canvas = new Canvas();
             canvas.setMinimumSize(new Dimension(width, height));
@@ -199,6 +197,10 @@ public class I3dCanvas {
     public void destroy() {
         Display.destroy();
         frame.dispose();
+    }
+    
+    public void maximise() {
+        frame.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
     }
     
 }
