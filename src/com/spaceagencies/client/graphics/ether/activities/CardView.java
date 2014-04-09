@@ -49,6 +49,10 @@ public class CardView extends ProxyView {
                 return (clearKey.equals(CardView.class));
             }
         });
+        
+        if(selectionManager.getSelection().contains(card)) {
+            setState(ViewState.SELECTED);
+        }
     }
     
 

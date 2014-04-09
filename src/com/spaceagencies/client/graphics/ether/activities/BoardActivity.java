@@ -106,11 +106,16 @@ public class BoardActivity extends Activity {
 
     @Override
     protected void onUpdate(Timestamp time) {
-        mTurn = mPlayer.getTurn();
-        updateUi();
+        if(mTurn != mPlayer.getTurn()) {
+            mTurn = mPlayer.getTurn();
+            updateUi();    
+        }
     }
     
     private void updateUi() {
+        
+//        cardSelectionManager.getSelection();
+        
         int deckSize = mTurn.getPlayer().getDeck().getNbCards();
         deckDescription.setText("Deck: "+deckSize+ " card"+(deckSize > 1 ? "s" : ""));
         
