@@ -5,6 +5,7 @@
     i3d:orientation="vertical" >
 
 	  <TextView
+		  i3d:id="titleTextView"
         i3d:text="Saturn V"
         i3d:layout_marginTop="5px"
         i3d:layout_width = "match_parent"
@@ -19,4 +20,14 @@
          	i3d:layout_marginRight="5px"
          	i3d:ref="saturn5@photos" 
          	/>
+         	
+         	<TextView
+         	i3d:id="descriptionTextView"
+        i3d:text="Saturn V"
+        i3d:layout_marginTop="5px"
+        i3d:layout_width = "match_parent"
+        i3d:gravity="center"
+        i3d:layout_marginBottom="5px"
+         />
+         	
 </LinearLayout>

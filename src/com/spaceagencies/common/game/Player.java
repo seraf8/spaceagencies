@@ -9,10 +9,18 @@ public class Player extends GameEntity {
 
     private boolean local;
 
+    private CardPile mDeck;
+    
+    private CardPile mDiscardPile;
+
+    private Turn mTurn;
     
 	public Player(Game game, long id, String login) {
 	    super(game, id);
         this.login = login;
+        
+        mDeck = new NormalCardPile();
+        mDiscardPile = new NormalCardPile();
         
         human = false;
 	}
@@ -35,5 +43,21 @@ public class Player extends GameEntity {
     
     public boolean isLocal() {
         return local;
+    }
+
+    public CardPile getDeck() {
+        return mDeck;
+    }
+    
+    public CardPile getDiscardPile() {
+        return mDiscardPile;
+    }
+
+    public void setTurn(Turn turn) {
+        mTurn = turn;
+    }
+    
+    public Turn getTurn() {
+        return mTurn;
     }
 }

@@ -1,5 +1,8 @@
 package com.spaceagencies.common.game;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class InfinitCardPile implements CardPile {
     
     private Card card;
@@ -34,6 +37,7 @@ public class InfinitCardPile implements CardPile {
 
     @Override
     public Card takeTop() {
+        // TODO Duplicate ?
         return this.card;
     }
 
@@ -50,6 +54,11 @@ public class InfinitCardPile implements CardPile {
     @Override
     public boolean isInfinite() {
         return true;
+    }
+
+    @Override
+    public List<Card> getCards() {
+        throw new RuntimeException("Don't call getCards on infinite card pile ! It's dangerous !");
     }
 
 }

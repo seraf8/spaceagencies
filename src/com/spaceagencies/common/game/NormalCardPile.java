@@ -2,6 +2,7 @@ package com.spaceagencies.common.game;
 
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 public class NormalCardPile implements CardPile {
     private LinkedList<Card> cards = new LinkedList<Card>();
@@ -70,7 +71,12 @@ public class NormalCardPile implements CardPile {
 
     @Override
     public boolean isInfinite() {
-        return true;
+        return false;
+    }
+    
+    @Override
+    public List<Card> getCards() {
+        return cards;
     }
 
 }

@@ -4,13 +4,15 @@ public class Turn {
     private Player player;
     private int actionCount = 1;
     private int buyCount = 1;
-    private CardPile pile = new NormalCardPile();
+    private int moneyCount = 0;
+    private CardPile mHand = new NormalCardPile();
     
     public Turn(Player player, CardPile deck) {
         super();
         this.player = player;
         for (int i = 0; i < 5; i++) {
-            pile.addTop(deck.takeTop());
+            //TODO check if enought cards
+            mHand.addTop(deck.takeTop());
         }
     }
 
@@ -30,8 +32,12 @@ public class Turn {
         return buyCount;
     }
 
-    public final CardPile getPile() {
-        return pile;
+    public int getMoneyCount() {
+        return moneyCount;
+    }
+    
+    public final CardPile getHand() {
+        return mHand;
     }
 
 }

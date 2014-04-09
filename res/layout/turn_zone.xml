@@ -40,17 +40,20 @@
 				i3d:layout_width="wrap_content"
 				i3d:layout_height="match_parent">
 				<TextView
-		        i3d:text="Brains : 5"
+				i3d:id="turnMoneyCounterTextView"
+		        i3d:text="Money : 5"
 		        i3d:layout_marginBottom="5px"
 		        i3d:layout_marginTop="10px"
 		         />
 		         <TextView
-		        i3d:text="Technologies : 3"
+		         i3d:id="turnActionCounterTextView"
+		        i3d:text="Action : 3"
 		        i3d:layout_marginBottom="5px"
 		        i3d:layout_marginTop="10px"
 		         />
 		         <TextView
-		        i3d:text="Research : 1"
+		         i3d:id="turnBuyCounterTextView"
+		        i3d:text="Buy : 1"
 		        i3d:layout_marginBottom="5px"
 		        i3d:layout_marginTop="10px"
 		         />

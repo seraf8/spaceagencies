@@ -10,6 +10,7 @@
     i3d:orientation="vertical" >
 
 	  <TextView
+	  i3d:id="discardPileTextView"
         i3d:text="Discard pile : 3 cards"
         i3d:layout_marginBottom="5px"
          />

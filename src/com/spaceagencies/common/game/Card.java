@@ -141,4 +141,19 @@ public class Card {
         }
 
     }
+    
+    public static Card getTestCard1() {
+        Card c = new Card("title1", "shortDescription", "longdescription1", "filename1", "action1", 2, 12, 0);
+        c.feature.add(new FeatureMoreActions(12));
+        c.feature.add(new FeatureMoreActions(13));
+        return c;
+    }
+    
+    public static Card getTestCard2() {
+        Card c = new Card("title2", "shortDescription2", "longdescription2", "filename2", "action2", 0, 3, 2);
+        c.feature.add(new FeatureMoreActions(12));
+        c.feature.add(new FeatureMoreActions(13));
+        return c;
+    }
+    
 }

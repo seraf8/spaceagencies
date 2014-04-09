@@ -10,6 +10,7 @@
     i3d:orientation="vertical" >
 
 	  <TextView
+	  	i3d:id="deckDescription"
         i3d:text="Deck : 5 cards"
         i3d:layout_marginBottom="5px"
          />
