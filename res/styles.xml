@@ -121,6 +121,7 @@
     
     <style name="cardFront" parent="cardBase@styles">
     	<item name="i3d:background">cardFrontBackground@backgrounds</item>
+    	<item state="selected" name="i3d:borderColor">selection@color</item>
     </style>
     <style name="cardBack" parent="cardBase@styles">
     	<item name="i3d:background">cardBackBackground@backgrounds</item>

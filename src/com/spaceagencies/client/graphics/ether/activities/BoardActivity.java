@@ -1,5 +1,7 @@
 package com.spaceagencies.client.graphics.ether.activities;
 
+import java.util.List;
+
 import com.spaceagencies.client.LoginManager;
 import com.spaceagencies.common.game.Card;
 import com.spaceagencies.common.game.Player;
@@ -7,6 +9,8 @@ import com.spaceagencies.common.game.Turn;
 import com.spaceagencies.i3d.Bundle;
 import com.spaceagencies.i3d.Measure;
 import com.spaceagencies.i3d.Measure.Axis;
+import com.spaceagencies.i3d.SelectionManager;
+import com.spaceagencies.i3d.SelectionManager.OnSelectionChangeListener;
 import com.spaceagencies.i3d.view.Activity;
 import com.spaceagencies.i3d.view.LinearLayout;
 import com.spaceagencies.i3d.view.TextView;
@@ -23,6 +27,8 @@ public class BoardActivity extends Activity {
     private TextView turnActionCounterTextView;
     private TextView turnBuyCounterTextView;
     private LinearLayout handLinearLayout;
+    private SelectionManager<Card> cardSelectionManager;
+    private LinearLayout detailZone;
 
     @Override
     public void onCreate(Bundle bundle) {
@@ -40,7 +46,28 @@ public class BoardActivity extends Activity {
         
         
         handLinearLayout = (LinearLayout) findViewById("handLinearLayout@layout/hand_zone");
+        detailZone = (LinearLayout) findViewById("detailZone@layout/board");
         
+        
+        cardSelectionManager = new SelectionManager<Card>();
+        
+        
+        cardSelectionManager.addOnSelectionChangeListener(new OnSelectionChangeListener<Card>() {
+
+            @Override
+            public void onSelectionChange(List<Card> selection) {
+                if(selection.size() > 0) {
+                    Card card = selection.get(0);
+                    detailZone.removeAllView();
+                    detailZone.addViewInLayout(new DetailedCardView(card));
+                    
+                }
+            }
+
+            @Override
+            public boolean mustClear(Object clearKey) {
+                return false;
+            }});
     }
 
     @Override
@@ -80,7 +107,7 @@ public class BoardActivity extends Activity {
         handLinearLayout.removeAllView();
         
         for(Card card : mTurn.getHand().getCards()) {
-            CardView cardView = new CardView(card);
+            CardView cardView = new CardView(card, cardSelectionManager);
             cardView.getLayoutParams().setMarginLeftMeasure(new Measure(5, false, Axis.HORIZONTAL));
             cardView.getLayoutParams().setMarginRightMeasure(new Measure(5, false, Axis.HORIZONTAL));
             handLinearLayout.addViewInLayout(cardView);
