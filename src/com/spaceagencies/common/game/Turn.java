@@ -12,6 +12,9 @@ public class Turn {
         this.player = player;
         for (int i = 0; i < 5; i++) {
             //TODO check if enought cards
+            
+            
+            
             mHand.addTop(deck.takeTop());
         }
     }
@@ -38,6 +41,14 @@ public class Turn {
     
     public final CardPile getHand() {
         return mHand;
+    }
+
+    public void doEnd() {
+        
+        // Discard hand
+        while(mHand.getNbCards() > 0) {
+            player.getDiscardPile().addTop(mHand.takeTop());    
+        }
     }
 
 }

@@ -11,10 +11,16 @@ import com.spaceagencies.i3d.Measure;
 import com.spaceagencies.i3d.Measure.Axis;
 import com.spaceagencies.i3d.SelectionManager;
 import com.spaceagencies.i3d.SelectionManager.OnSelectionChangeListener;
+import com.spaceagencies.i3d.input.I3dMouseEvent;
 import com.spaceagencies.i3d.view.Activity;
+import com.spaceagencies.i3d.view.Button;
 import com.spaceagencies.i3d.view.LinearLayout;
 import com.spaceagencies.i3d.view.TextView;
+import com.spaceagencies.i3d.view.View;
+import com.spaceagencies.i3d.view.View.OnClickListener;
+import com.spaceagencies.server.GameServer;
 import com.spaceagencies.server.Time.Timestamp;
+import com.spaceagencies.server.engine.game.GameEngine;
 
 public class BoardActivity extends Activity {
 
@@ -29,10 +35,13 @@ public class BoardActivity extends Activity {
     private LinearLayout handLinearLayout;
     private SelectionManager<Card> cardSelectionManager;
     private LinearLayout detailZone;
+    private Button endTurnButton;
+    private GameEngine mGameEngine;
 
     @Override
     public void onCreate(Bundle bundle) {
         setContentView("main@layout/board");
+        mGameEngine = GameServer.getGameEngine();
         
         mPlayer = LoginManager.getLocalPlayer();
         
@@ -48,6 +57,16 @@ public class BoardActivity extends Activity {
         handLinearLayout = (LinearLayout) findViewById("handLinearLayout@layout/hand_zone");
         detailZone = (LinearLayout) findViewById("detailZone@layout/board");
         
+        endTurnButton = (Button) findViewById("endTurnButton@layout/turn_zone");
+        
+        
+        endTurnButton.setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(I3dMouseEvent mouseEvent, View view) {
+                mGameEngine.endTurn(mTurn);
+            }
+        });
         
         cardSelectionManager = new SelectionManager<Card>();
         
@@ -87,6 +106,8 @@ public class BoardActivity extends Activity {
 
     @Override
     protected void onUpdate(Timestamp time) {
+        mTurn = mPlayer.getTurn();
+        updateUi();
     }
     
     private void updateUi() {

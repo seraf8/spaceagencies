@@ -181,7 +181,7 @@ public class GameServer {
         GameServer.worldEngine = worldEngine;
     }
 
-    public static GameEngine getWorldEngine() {
+    public static GameEngine getGameEngine() {
         return worldEngine;
     }
     

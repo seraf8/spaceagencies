@@ -64,11 +64,7 @@ public class GameEngine implements Engine {
         deck.shuffle();
 
         // Ready to play
-        
-        
-        Turn turn = new Turn(newPlayer, newPlayer.getDeck());
-        
-        newPlayer.setTurn(turn);
+        newTurn(newPlayer);
     }
     
     
@@ -83,6 +79,18 @@ public class GameEngine implements Engine {
         for(GameEngineObserver observer : mWorldEngineObservable.getObservers()) {
             observer.onPlayerConnected(player);
         }
+    }
+
+
+    public void endTurn(Turn turn) {
+        turn.doEnd();
+        newTurn(turn.getPlayer());
+    }
+
+
+    private void newTurn(Player player) {
+        Turn turn = new Turn(player, player.getDeck());
+        player.setTurn(turn);
     }
 
 }
