@@ -13,9 +13,27 @@ public class Turn {
         for (int i = 0; i < 5; i++) {
             //TODO check if enought cards
             
-            
-            
-            mHand.addTop(deck.takeTop());
+            Card card = draw();
+            if(card !=null) {
+                mHand.addTop(card);
+            }
+        }
+    }
+
+    private Card draw() {
+        
+        if(player.getDeck().getNbCards() == 0) {
+            // Discard pile as deck
+            while(player.getDiscardPile().getNbCards() > 0) {
+                player.getDeck().addTop(player.getDiscardPile().takeTop());    
+            }
+            player.getDeck().shuffle();
+        }
+        
+        if(player.getDeck().getNbCards() == 0) {
+            return null;
+        } else {
+            return player.getDeck().takeTop();    
         }
     }
 
